@@ -19,12 +19,12 @@ Project of introduction to R language using a Machine Failures Datased and progr
     
   As we can see, this dataset was originally created to extract rules to determine the conditions under which a machine will fail. It includes 20 columns, where the first 19 represent the attributes of each instance (elements X) and they can be two types of data: 'in' and 'fct' (factors); and one factor value 'Failure' that can be [No,Yes] and it will be our target (element Y).
   
-  After getting information about the datas, it can be seen that there are some problems with the variables:
+  After getting information about the data, it can be seen that there are some problems with the variables:
   
-  - Measure2 and Measure3 are integer values, but there are few different values from each other, so this leads us to think that they are factors instead of integers.
-  - Seeing the p0 (minimun) and p25 values of 'Temperature' it seems it has atypical values.
+  - Measure2 and Measure3 are integer values, but there isn't much difference in value from each other, so this leads us to think that they are factors instead of integers.
+  - Seeing the p0 (minimun) and p25 values of 'Temperature', it seems it has atypical values.
   
-  We can also conclude that there aren't null values, so we will not have to drop any characteristic.
+  We can also conclude that there aren't null values, so we will not have to remove any characteristics.
   
 ## Temperature Analysis
 
@@ -33,7 +33,7 @@ Project of introduction to R language using a Machine Failures Datased and progr
 ![chi3](Pics/R_plot_zoom_png.png)
 
   
-  The conclusion seeing this bloxplot is that most of the values are concentrated in the p25 and p75 but there are four points that are very atypical (because they are under 60º).
+  The conclusion seeing this boxplot is that most of the values are concentrated in the p25 and p75 but there are four points that are very atypical (because they are under 60º).
   
   So, to fix this problem, I'm going to remove the temperature values under 60º and I'll transform Measure2 and Measure3 in factors variables.
   
