@@ -2,7 +2,7 @@
 Introductory Project to R language using a Machine Failures Datased and programmed in RStudio Cloud.
 
 ## Main Files:
-- code: notebook_proyecto.Rmd
+- code: notebookProyecto.R
 - dataset: DataSetFallosMaquina.csv
 
 ## Read DataSet and Analysis of data
