@@ -1,5 +1,5 @@
 # Machine-Failures-Dataset
-Introductory Project to R language using a Machine Failures Datased and programmed in RStudio Cloud.
+Project of introduction to R language using a Machine Failures Datased and programmed in RStudio Cloud.
 
 ## Main Files:
 - code: notebookProyecto.R
