@@ -82,15 +82,15 @@ Integer variables:
 
 ![chi7](Pics/R_correlacion.PNG)
 
-  We can see that all the attributes provide us information. The values in the correlation matrix vary in a range of [-1,1]. However, a high negative correlation demostrates a connection between two characteristics in the same way as a positive correlation.
+  We can see that all the attributes provide us information. The values in the correlation matrix vary in a range of [-1,1]. However, a high negative correlation demonstrates a connection between two characteristics in the same way as a positive correlation.
   
 ## Balance the dataset
 
   Referring to the exploratory data analysis of the factor variables, we noticed that the 'Failure' variable is really imbalanced.
   
-  There is 8699 predictions where the machine doesn't fail and otherwise there is only 81 times where the machine fails. In consecuense, we take the risk that our model will 'accommodate' and predict always a 'No'. 
+  There are 8699 predictions where the machine doesn't fail, otherwise there are only 81 times where the machine fails. In consecuense, we take the risk that our model will 'accommodate' and predict always a 'No'. 
   
-  To avoid is, we wel try to achieve and ideal balanced dataset using a undersampling technique. The simplest undersampling technique involves randomly selecting from the majority class and deleting them from the dataset.
+  To avoid this, we will try to achieve and ideal balanced dataset using a undersampling technique. The simplest undersampling technique involves randomly selecting from the majority class and deleting them from the dataset.
   
 ## Undersampling dataset
 
@@ -116,7 +116,7 @@ Now we have a more balanced dataset with 80% No's and 20% Yes's.
     indep <- names(df_red)[-20]   
     formula <- reformulate(indep,target)
   
-  - We use a Logistic Regression to model the dataset because we want a result between [0,1] == [No,Yes].
+  - We use a Logistic Regression to model the dataset because we want to obtain a result between [0,1] == [No,Yes].
   We use the glm functions in R:
   
     rl <- glm(formula,df_red,family=binomial(link='logit'))
@@ -124,7 +124,7 @@ Now we have a more balanced dataset with 80% No's and 20% Yes's.
     
 ![chi9](Pics/R_glm.PNG)   
 
-We see that there is only three predictive variables, those which have one ore more '*'.
+We see that there are only three predictive variables, those which have one or more '*'.
 [NOTE: '*' indicates that it is a predictor variable at a 95% confidence level]
 
 Therefore we remove all the attributes which don't contribute with predictive information.
@@ -147,7 +147,7 @@ Therefore we remove all the attributes which don't contribute with predictive in
     
 ![chi11](Pics/R_scoring.PNG)         
     
-  As we can see with the previous image, we have obteined an initial results with a 1% of probability that the machine fails. So, we determine a cut-off-point above 80%. If this condition is met, we will determine that the machine will fail.
+  As we can see with the previous image, we have obteined initial results with a 1% probability that the machine fails. So, we determine a cut-off-point above 80%. If this condition is met, we will determine that the machine will fail.
   
     df$prediccion <- ifelse(df$scoring > 0.8,1,0)
     table(df$prediccion)
