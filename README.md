@@ -113,15 +113,13 @@ Now we have a more balanced dataset with 80% No's and 20% Yes's.
   
   - We separate the variables from the dataset:
   
-    indep <- names(df_red)[-20]
-    
+    indep <- names(df_red)[-20]   
     formula <- reformulate(indep,target)
   
   - We use a Logistic Regression to model the dataset because we want a result between [0,1] == [No,Yes].
   We use the glm functions in R:
   
     rl <- glm(formula,df_red,family=binomial(link='logit'))
-    
     summary(rl)
     
 ![chi9](Pics/R_glm.PNG)   
