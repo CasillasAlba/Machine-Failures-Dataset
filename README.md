@@ -17,7 +17,7 @@ Project of introduction to R language using a Machine Failures Datased and progr
  ![chi2](Pics/R_dataset2.PNG)
  
     
-  As we can see, this dataset was originally created to extract rules to determine the conditions under which a machine will fail. It includes 20 columns, where the first 19 represent the attributes of each instance (elements X) and they can be two types of data: 'in' and 'fct' (factors); and one factor value 'Failure' what can be [No,Yes] and it will be our target (element Y).
+  As we can see, this dataset was originally created to extract rules to determine the conditions under which a machine will fail. It includes 20 columns, where the first 19 represent the attributes of each instance (elements X) and they can be two types of data: 'in' and 'fct' (factors); and one factor value 'Failure' that can be [No,Yes] and it will be our target (element Y).
   
   After getting information about the datas, it can be seen that there are some problems with the variables:
   
